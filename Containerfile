@@ -17,5 +17,5 @@ FROM ghcr.io/containerpak/mesa:main
 COPY --from=build /staging/usr/ /usr/
 
 RUN apt update && \
-    apt install -y --no-install-recommends libasound2t64 libcurl4t64 libfluidsynth3 libflac14 libfreetype6 libjpeg-turbo8 libpng16-16 libsdl2-2.0-0 libtheora0 libvorbis0a && \
+    apt install -y --no-install-recommends libasound2t64 libcurl4t64 libfluidsynth3 libflac14 libfreetype6 libjpeg-turbo8 libpng16-16 libsdl2-2.0-0 libtheora1 libvorbis0a && \
     cpak-clean-junk
