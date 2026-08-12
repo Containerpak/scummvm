@@ -18,4 +18,5 @@ COPY --from=build /staging/usr/ /usr/
 
 RUN apt update && \
     apt install -y --no-install-recommends libasound2t64 libcurl4t64 libfluidsynth3 libflac14 libfreetype6 libjpeg-turbo8 libpng16-16 libsdl2-2.0-0 libtheora1 libtheoradec2 libvorbis0a libvorbisfile3 && \
+    ! ldd /usr/bin/scummvm | grep -q 'not found' && \
     cpak-clean-junk
