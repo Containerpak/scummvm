@@ -4,7 +4,7 @@ ARG SCUMMVM_COMMIT=fed42f2068dcafc6aafa1c28c77e4c88def74b66
 
 RUN apt update && \
     apt install -y --no-install-recommends git libasound2-dev libcurl4-openssl-dev libfluidsynth-dev libflac-dev libfreetype-dev libjpeg-dev libpng-dev libsdl2-dev libtheora-dev libvorbis-dev && \
-    git clone https://github.com/scummvm/scummvm.git /src/scummvm && \
+    git clone --depth 1 --branch v2026.3.0 https://github.com/scummvm/scummvm.git /src/scummvm && \
     cd /src/scummvm && \
     git checkout "$SCUMMVM_COMMIT" && \
     test "$(git rev-parse HEAD)" = "$SCUMMVM_COMMIT" && \
