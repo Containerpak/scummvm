@@ -1,4 +1,4 @@
-FROM ghcr.io/containerpak/mesa-sdk:main AS build
+FROM ghcr.io/containerpak/mesa64-sdk:main AS build
 
 ARG SCUMMVM_COMMIT=fed42f2068dcafc6aafa1c28c77e4c88def74b66
 
@@ -12,7 +12,7 @@ RUN apt update && \
     make -j"$(nproc)" && \
     DESTDIR=/staging make install
 
-FROM ghcr.io/containerpak/mesa:main
+FROM ghcr.io/containerpak/mesa64:main
 
 COPY --from=build /staging/usr/ /usr/
 
