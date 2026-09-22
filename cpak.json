@@ -4,7 +4,7 @@
   "name": "ScummVM",
   "description": "Engine for classic adventure games.",
   "version": "2026.3.0",
-  "image": "ghcr.io/containerpak/scummvm@sha256:68bb21fdbe8677ddb5baa438a861ee267e0e71171684f03bf941957fd2170e8c",
+  "image": "ghcr.io/containerpak/scummvm@sha256:a7e872a7df0b9badcf05df0966143080ed004b2f75dd50d2d83290367191ac1b",
   "binaries": [
     "/usr/bin/scummvm"
   ],
